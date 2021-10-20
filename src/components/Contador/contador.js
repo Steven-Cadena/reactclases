@@ -1,6 +1,14 @@
 //DEBEMOS IMPORTAR SIEMPRE {Component} CON JSX
 import {Component} from 'react';
 
+//TAMBIEN PODEMOS UTILIZAR function con 
+//SINTAXIS DE JavaScript PARA SEPARAR CODIGO 
+//LOGICAMENTE, EN ESTA FUNCION NO PODEMOS 
+//UTILIZAR NADA DE LA CLASE
+function miFuncion(){
+    console.log("Soy una función fuera de la clase");
+}
+
 class Contador extends Component{
 
     render(){
@@ -17,6 +25,7 @@ class Contador extends Component{
             <button onClick={()=>{
                 // SI EL METODO ESTÁ EN RENDER LA LLAMADA SE REALIZA COMO SIEMPRE
                 miMetodoRender();
+                miFuncion();
             }}>
                 Pulsa y haz algo
             </button>

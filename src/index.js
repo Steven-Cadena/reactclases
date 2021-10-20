@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Contador from './components/Contador/contador';
+import Contador from './components/Contador/Contador';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Contador />
+    <div className="App">
+      <Contador  Inicio="25"/>
+      <Contador  Inicio="11"/>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

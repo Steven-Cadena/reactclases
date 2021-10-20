@@ -25,7 +25,13 @@ class Contador extends Component{
     //SE UTILIZA state DE LA CLASE, CON state DE LA CLASE PRIMERO DECLARAMOS LAS 
     //VARIABLES DE ESTADO Y LUEGO PODEMOS MODIFICARLAS CON EL METODO setState 
     // state = {variable1: valor1, variable2:valor2 };
-    state = { valor: 1};
+
+    //ASIGNAMOS UN VALOR CONSTANTE
+
+    //state = { valor: 1};
+    //PERO PODEMOS UTILIZAR props
+
+    state = {valor: parseInt(this.props.Inicio) };
     //CREAMOS UN METODO PARA CAMBIAR EL VALOR 
     incrementarvalor = () => {
         //AQUI LO UNICO QUE DEBEMNOS HACER ES CAMBIAR EL ESTADO Y LA VARIABLE valor
@@ -51,7 +57,9 @@ class Contador extends Component{
             <h2 style={{color:"red"}}>
                 Variable estado: {this.state.valor}
             </h2>
-            <button onClick = { () => this.incrementarvalor()}>
+            {/* Si estamos utilizando METODOS de CLASE 
+            PODEMOS LLAMARLA CON OTRA SINTAXIS MAS FACIL */}
+            <button onClick = {this.incrementarvalor}>
                 Incrementar variable de estado
             </button>
             <button onClick={()=>{

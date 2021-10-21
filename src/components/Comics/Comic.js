@@ -16,6 +16,18 @@ class Comic extends Component{
                 }}>
                     Seleccionar favorito
                 </button>
+                <button onClick={() => {
+                    var index = this.props.index;
+                    this.props.eliminarComic(index);
+                }} style={{backgroundColor:"red", color:"white"}}>
+                    Eliminar comic
+                </button>
+                <button onClick={() => {
+                    var index = this.props.index;
+                    this.props.modificarComic(index);
+                }} style={{backgroundColor:"blue", color:"white"}}>
+                    Modificar
+                </button>
                 <h1 style={{color:"orange"}}>
                     {this.props.comic.descripcion}
                 </h1>

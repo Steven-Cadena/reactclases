@@ -52,12 +52,58 @@ class Comics extends Component{
         });
     }
 
+    eliminarComic = (index) => {
+        //splice()  RECIBE DOS PARAMETROS 
+        //1) INDICE A ELIMINAR 
+        //2) NUMERO DE ELEMENTOS A ELIMINAR
+        this.state.comics.splice(index,1);
+        this.setState({
+            comics:this.state.comics
+        });
+    }
+
+    modificarComic = (index) => {
+        var titulo = document.getElementById("cajatitulo").value;
+        var imagen = document.getElementById("cajaimagen").value;
+        var descripcion = document.getElementById("cajadescripcion").value;
+        var comic = {
+            titulo:titulo,
+            imagen:imagen,
+            descripcion:descripcion
+        };
+
+    };
+
+    insertarComic = () => {
+        var titulo = document.getElementById("cajatitulo").value;
+        var imagen = document.getElementById("cajaimagen").value;
+        var descripcion = document.getElementById("cajadescripcion").value;
+        var comic = {
+            titulo:titulo,
+            imagen:imagen,
+            descripcion:descripcion
+        };
+        this.state.comics.push(comic);
+        this.setState({
+            comics: this.state.comics
+        });
+    };
     render(){
         return(
             <div>
                 <h1 style={{color:"blue"}}>
                     Ejemplo Comics Objetos/colecciones
                 </h1>
+                {/* NO PODEMOS UTILIZAR FORMULARIOS EN REACT */}
+                <label>Titulo</label>
+                <input type="text" id="cajatitulo"/> <br/>
+                <label>Imagen</label>
+                <input type="text" id="cajaimagen"/> <br/>
+                <label>Descripción</label>
+                <input type="text" id="cajadescripcion"/> <br/>
+                <button onClick={this.insertarComic}>
+                    Nuevo comic
+                </button>
                 <hr/>
                 {/* ESTO ES UN IF  */}
                 {this.state.favorito && 
@@ -68,7 +114,7 @@ class Comics extends Component{
                 )}
                 <hr/>
                 {this.state.comics.map((comic,index) => {
-                    return (<Comic comic={comic} key={index} seleccionarFavorito={this.seleccionarFavorito}/>);
+                    return (<Comic comic={comic} key={index} index={index} seleccionarFavorito={this.seleccionarFavorito} eliminarComic={this.eliminarComic}/>);
                 })}
             </div>
         );

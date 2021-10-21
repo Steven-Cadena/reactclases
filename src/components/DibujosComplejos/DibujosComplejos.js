@@ -64,7 +64,7 @@ class DibujosComplejos extends Component{
                 { this.state.nombres.map((name, index)=>{
                     //A DIFERENCIA DEL CODIGO EN METODO AQUI PONDREMOS EL RETURN 
                     //DIRECTO DEL CODIGO QUE DESEEMOS
-                    return(<h2>{name}</h2>);
+                    return(<p key={index}>{name}</p>);
                 })}
 
 

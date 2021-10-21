@@ -6,14 +6,16 @@ import App from './components/App/App';
 import Contador from './components/Contador/Contador';
 import DibujosComplejos from './components/DibujosComplejos/DibujosComplejos';
 import Deportes from './components/Deportes/Deportes';
+import Numeros from './components/Numeros/Numeros';
 
 ReactDOM.render(
   <React.StrictMode>
     <div className="App">
       {/* <Contador  Inicio="25"/>
       <Contador  Inicio="11"/> 
-      <DibujosComplejos/>*/}
-      <Deportes/>
+      <DibujosComplejos/>
+      <Deportes/>*/}
+      <Numeros/>
     </div>
   </React.StrictMode>,
   document.getElementById('root')

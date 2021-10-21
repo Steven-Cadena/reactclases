@@ -7,6 +7,7 @@ import Contador from './components/Contador/Contador';
 import DibujosComplejos from './components/DibujosComplejos/DibujosComplejos';
 import Deportes from './components/Deportes/Deportes';
 import Numeros from './components/Numeros/Numeros';
+import Comics from './components/Comics/Comics';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,8 +15,9 @@ ReactDOM.render(
       {/* <Contador  Inicio="25"/>
       <Contador  Inicio="11"/> 
       <DibujosComplejos/>
-      <Deportes/>*/}
-      <Numeros/>
+      <Deportes/>
+      <Numeros/>*/}
+      <Comics/>
     </div>
   </React.StrictMode>,
   document.getElementById('root')

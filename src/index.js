@@ -14,6 +14,8 @@ import Musica from './components/Rutas/Musica';
 import Television from './components/Rutas/Television';
 import Router from './components/Router';
 import MenuRutas from './components/Rutas/MenuRutas';
+import EjemploSimple from './components/Formularios/EjemploSimple';
+import Collatz from './components/Formularios/Collatz';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,9 +25,11 @@ ReactDOM.render(
       <DibujosComplejos/>
       <Deportes/>
       <Numeros/>
-      <Comics/>*/}
+      <Comics/>
       <MenuRutas/>
       <Router/>
+      <EjemploSimple/>*/}
+      <Collatz/>
     </div>
   </React.StrictMode>,
   document.getElementById('root')

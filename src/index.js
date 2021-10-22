@@ -16,6 +16,8 @@ import Router from './components/Router';
 import MenuRutas from './components/Rutas/MenuRutas';
 import EjemploSimple from './components/Formularios/EjemploSimple';
 import Collatz from './components/Formularios/Collatz';
+import TablaMultiplicar from './components/Formularios/TablaMultiplicar';
+import TablaMultiplicarSelect from './components/Formularios/TablaMultiplicarSelect';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -28,8 +30,10 @@ ReactDOM.render(
       <Comics/>
       <MenuRutas/>
       <Router/>
-      <EjemploSimple/>*/}
+      <EjemploSimple/>
       <Collatz/>
+      <TablaMultiplicar/>*/}
+      <TablaMultiplicarSelect/>
     </div>
   </React.StrictMode>,
   document.getElementById('root')

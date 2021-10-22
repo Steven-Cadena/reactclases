@@ -52,7 +52,7 @@ export default class Collatz extends Component {
 
                 <form onSubmit={this.mostrarCollatz}>
                     <label> Introduce un número: </label>
-                    <input type="number" ref={this.cajacollatz} onChange={this.mostrarCollatz}/>
+                    <input type="number" ref={this.cajacollatz} />
                     <button>
                         Enviar número
                     </button>

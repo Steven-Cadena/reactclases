@@ -66,12 +66,13 @@ class Comics extends Component{
         var titulo = document.getElementById("cajatitulo").value;
         var imagen = document.getElementById("cajaimagen").value;
         var descripcion = document.getElementById("cajadescripcion").value;
-        var comic = {
-            titulo:titulo,
-            imagen:imagen,
-            descripcion:descripcion
-        };
-
+        var comic = this.state.comics[index];
+        comic.titulo = titulo;
+        comic.imagen = imagen;
+        comic.descripcion = descripcion;
+        this.setState({
+          comics: this.state.comics
+      });
     };
 
     insertarComic = () => {
@@ -114,7 +115,10 @@ class Comics extends Component{
                 )}
                 <hr/>
                 {this.state.comics.map((comic,index) => {
-                    return (<Comic comic={comic} key={index} index={index} seleccionarFavorito={this.seleccionarFavorito} eliminarComic={this.eliminarComic}/>);
+                    return (<Comic comic={comic} key={index} index={index} 
+                      seleccionarFavorito={this.seleccionarFavorito} 
+                      eliminarComic={this.eliminarComic} 
+                      modificarComic={this.modificarComic}/>);
                 })}
             </div>
         );

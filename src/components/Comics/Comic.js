@@ -3,7 +3,6 @@ import React, { Component } from "react";
 //COMPONENTE HIJO
 class Comic extends Component{
 
-
     render(){
         return(
             <React.Fragment>
@@ -26,7 +25,7 @@ class Comic extends Component{
                     var index = this.props.index;
                     this.props.modificarComic(index);
                 }} style={{backgroundColor:"blue", color:"white"}}>
-                    Modificar
+                    Modificar comic
                 </button>
                 <h1 style={{color:"orange"}}>
                     {this.props.comic.descripcion}

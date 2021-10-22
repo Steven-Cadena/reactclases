@@ -8,6 +8,12 @@ import DibujosComplejos from './components/DibujosComplejos/DibujosComplejos';
 import Deportes from './components/Deportes/Deportes';
 import Numeros from './components/Numeros/Numeros';
 import Comics from './components/Comics/Comics';
+import Home from './components/Rutas/Home';
+import Cine from './components/Rutas/Cine';
+import Musica from './components/Rutas/Musica';
+import Television from './components/Rutas/Television';
+import Router from './components/Router';
+import MenuRutas from './components/Rutas/MenuRutas';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,8 +22,10 @@ ReactDOM.render(
       <Contador  Inicio="11"/> 
       <DibujosComplejos/>
       <Deportes/>
-      <Numeros/>*/}
-      <Comics/>
+      <Numeros/>
+      <Comics/>*/}
+      <MenuRutas/>
+      <Router/>
     </div>
   </React.StrictMode>,
   document.getElementById('root')

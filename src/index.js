@@ -18,6 +18,7 @@ import EjemploSimple from './components/Formularios/EjemploSimple';
 import Collatz from './components/Formularios/Collatz';
 import TablaMultiplicar from './components/Formularios/TablaMultiplicar';
 import TablaMultiplicarSelect from './components/Formularios/TablaMultiplicarSelect';
+import SeleccionMultiple from './components/Formularios/SeleccionMultiple';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -32,8 +33,9 @@ ReactDOM.render(
       <Router/>
       <EjemploSimple/>
       <Collatz/>
-      <TablaMultiplicar/>*/}
-      <TablaMultiplicarSelect/>
+      <TablaMultiplicar/>
+      <TablaMultiplicarSelect/>*/}
+      <SeleccionMultiple/>
     </div>
   </React.StrictMode>,
   document.getElementById('root')

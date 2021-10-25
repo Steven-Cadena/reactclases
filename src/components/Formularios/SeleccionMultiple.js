@@ -21,6 +21,7 @@ export default class SeleccionMultiple extends Component {
     mostrarSeleccionados = (e) => {
         e.preventDefault();
         var options = this.selectmultiple.current.options;
+        console.log(options);
         var datos = "";
         for (var i = 0; i<options.length; i++){
             if (options[i].selected == true){
